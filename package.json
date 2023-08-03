@@ -1,0 +1,45 @@
+{
+  "name": "@bollesmedia/graphql-request",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": {
+      "default": "./dist/esm/index.js"
+    },
+    "require": {
+      "default": "./dist/cjs/index.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build:cjs": "npx tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "npx tsc --module esnext --target esnext --moduleResolution nodenext --outDir dist/esm",
+    "build": "npm run build:cjs && npm run build:esm",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BollesMedia/graphql-request.git"
+  },
+  "author": "drewbolles@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BollesMedia/graphql-request/issues"
+  },
+  "homepage": "https://github.com/BollesMedia/graphql-request#readme",
+  "dependencies": {
+    "graphql": "^16.7.1"
+  },
+  "devDependencies": {
+    "@graphql-typed-document-node/core": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  }
+}
